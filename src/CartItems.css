@@ -5,22 +5,10 @@
   padding: 20px;
 }
 
-.CartItem {
-  display: flex;
-  padding-top: 12px;
-  padding-bottom: 12px;
+.CartItems h1 {
+  margin-bottom: 8px;
 }
 
-.CartItem-image {
-  width: 180px;
-  min-width: 180px;
-  min-height: 180px;
-  height: 180px;
-  margin-right: 16px;
-}
 
-.CartItem-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+
+
