@@ -1,0 +1,44 @@
+.Trending {
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    background-color: white;
+    z-index: 1; 
+    margin: 10px;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.Trending-title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.Trending-image {
+    cursor: pointer;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 8px;
+
+}
+
+.Trending a {
+    width: 100%;
+    margin-top: 16px;
+    color: #007185;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.Trending a:hover {
+    cursor: pointer;
+    color: #c7511f;
+    text-decoration: underline;
+}

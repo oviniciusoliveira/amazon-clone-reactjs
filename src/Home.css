@@ -1,3 +1,7 @@
+.Home {
+  display: flex;
+  justify-content: center;
+}
 .Home-banner {
   height: 600px;
   background-size: cover;
@@ -11,6 +15,12 @@
 .Home-content {
     margin-top: -350px;
 }
+
+.Home-trending {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .Home-row {
     display: flex;
     flex-wrap: wrap;
