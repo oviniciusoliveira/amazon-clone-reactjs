@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     db.collection("products").onSnapshot((snapshot) => {
       let tempProducts = [];
-      snapshot.docs.map((doc) => {
+      snapshot.docs.forEach((doc) => {
         tempProducts.push({
           id: doc.id,
           product: doc.data(),

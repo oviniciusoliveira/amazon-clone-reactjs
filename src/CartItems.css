@@ -1,0 +1,26 @@
+.CartItems {
+  flex: 0.7;
+  background-color: #ffffff;
+  margin-right: 18px;
+  padding: 20px;
+}
+
+.CartItem {
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.CartItem-image {
+  width: 180px;
+  min-width: 180px;
+  min-height: 180px;
+  height: 180px;
+  margin-right: 16px;
+}
+
+.CartItem-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

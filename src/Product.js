@@ -2,7 +2,6 @@ import React from "react";
 import "./Product.css";
 
 function Product(props) {
-  console.log(props);
   return (
     <div className="Product">
       <div className="Product-description">

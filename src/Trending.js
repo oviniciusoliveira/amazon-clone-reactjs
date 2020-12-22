@@ -14,7 +14,7 @@ function Trending(props) {
       >
         {/* <img src={props.image} alt="" /> */}
       </div>
-      <a>Link Provisório</a>
+      <a href="/">Link Provisório</a>
     </div>
   );
 }
