@@ -1,8 +1,24 @@
-import React from "react";
-import './Home.css'
-import Product from './Product'
+import React, { useEffect, useState } from "react";
+import "./Home.css";
+import Product from "./Product";
+import { db } from "./firebase";
 
 function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    db.collection('products').onSnapshot((snapshot) => {
+      let tempProducts = [];
+      snapshot.docs.map((doc) => {
+        tempProducts.push({
+          id: doc.id,
+          product: doc.data(),
+        });
+      });
+      setProducts(tempProducts);
+    });
+  }, []);
+
   return (
     <div className="Home">
       <div className="Home-container">
@@ -14,15 +30,22 @@ function Home() {
           }}
         ></div>
         <div className="Home-content">
-            <div className="Home-row">
-                <Product />
-                <Product />
-            </div>
-            <div className="Home-row">
-                <Product />
-                <Product />
-                <Product />
-            </div>
+          <div className="Home-row">
+            {products.map((product) => (
+              <Product
+                key={product.id}
+                title={product.product.title}
+                price={product.product.price}
+                rating={product.product.rating}
+                image={product.product.image}
+              />
+            ))}
+          </div>
+          <div className="Home-row">
+            <Product />
+            <Product />
+            <Product />
+          </div>
         </div>
       </div>
     </div>
